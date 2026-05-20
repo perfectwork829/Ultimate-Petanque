@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Ultimate Petanque — Suivi de performances, matchs, défis, tournois et carte interactive pour la pétanque.">
+  <title>Ultimate Petanque — Application mobile</title>
+  <link rel="stylesheet" href="styles/site.css">
+  <link rel="icon" href="assets/logo.png" type="image/png">
+  <style>
+    body { margin: 0; font-family: system-ui, sans-serif; background: #F8FAFC; color: #0F172A; }
+    body.lang-fr [lang="en"], body.lang-en [lang="fr"] { display: none !important; }
+  </style>
+</head>
+<body class="lang-fr" data-page="home">
+  <header class="site-header">
+    <div class="site-header-inner">
+      <a href="index.html" class="brand">
+        <img src="assets/logo.png" alt="" class="brand-logo" width="44" height="44" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+        <span class="brand-logo-fallback" style="display:none" aria-hidden="true">🌍</span>
+        <span class="brand-text">
+          <span class="brand-name">Ultimate Petanque</span>
+          <span class="brand-tagline" lang="fr">Performance &amp; communauté</span>
+          <span class="brand-tagline" lang="en">Performance &amp; community</span>
+        </span>
+      </a>
+      <nav class="site-nav" aria-label="Main">
+        <a href="index.html"><span lang="fr">Accueil</span><span lang="en">Home</span></a>
+        <a href="privacy-policy.html"><span lang="fr">Confidentialité</span><span lang="en">Privacy</span></a>
+        <a href="terms-of-service.html"><span lang="fr">Conditions</span><span lang="en">Terms</span></a>
+      </nav>
+      <div class="lang-switch">
+        <button type="button" data-lang="fr" class="active" onclick="setLang('fr')">FR</button>
+        <button type="button" data-lang="en" onclick="setLang('en')">EN</button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero-home">
+      <div class="hero-home-badge" lang="fr">Application mobile</div>
+      <div class="hero-home-badge" lang="en">Mobile app</div>
+      <h1 lang="fr">La pétanque, suivie comme un sport de haut niveau</h1>
+      <h1 lang="en">Petanque, tracked like a pro sport</h1>
+      <p class="lead" lang="fr">
+        Matchs, défis (10 tirs, sautée, précision), tournois, annuaire, carte interactive,
+        statistiques avancées et communauté — le tout dans une seule application.
+      </p>
+      <p class="lead" lang="en">
+        Matches, challenges (10 shots, lob, precision), tournaments, directory, interactive map,
+        advanced stats and community — all in one app.
+      </p>
+      <div class="hero-cta">
+        <span class="btn btn-primary" lang="fr">📱 Bientôt sur App Store &amp; Google Play</span>
+        <span class="btn btn-primary" lang="en">📱 Coming to App Store &amp; Google Play</span>
+        <a href="mailto:ultimate.petanque.app@gmail.com" class="btn btn-secondary" lang="fr">Nous contacter</a>
+        <a href="mailto:ultimate.petanque.app@gmail.com" class="btn btn-secondary" lang="en">Contact us</a>
+      </div>
+    </section>
+
+    <section class="features" aria-label="Features">
+      <article class="feature-card">
+        <div class="feature-icon" style="background:rgba(37,99,235,0.12)">📊</div>
+        <h3 lang="fr">Matchs &amp; notation</h3>
+        <h3 lang="en">Matches &amp; notation</h3>
+        <p lang="fr">Score en direct, notation détaillée (tir / point), statistiques et export PDF/CSV.</p>
+        <p lang="en">Live scoring, detailed shot notation, statistics and PDF/CSV export.</p>
+      </article>
+      <article class="feature-card">
+        <div class="feature-icon" style="background:rgba(245,158,11,0.15)">🎯</div>
+        <h3 lang="fr">Défis &amp; tournois</h3>
+        <h3 lang="en">Challenges &amp; tournaments</h3>
+        <p lang="fr">10 tirs, tirs sautée, précision, phases et tableaux de tournois.</p>
+        <p lang="en">10 shots, lob shots, precision, tournament phases and brackets.</p>
+      </article>
+      <article class="feature-card">
+        <div class="feature-icon" style="background:rgba(16,185,129,0.12)">🗺️</div>
+        <h3 lang="fr">Carte &amp; annuaire</h3>
+        <h3 lang="en">Map &amp; directory</h3>
+        <p lang="fr">Terrains, clubs, joueurs publics et partenaires sur une carte interactive.</p>
+        <p lang="en">Courts, clubs, public players and partners on an interactive map.</p>
+      </article>
+      <article class="feature-card">
+        <div class="feature-icon" style="background:rgba(59,130,246,0.12)">🏆</div>
+        <h3 lang="fr">Communauté</h3>
+        <h3 lang="en">Community</h3>
+        <p lang="fr">Classements, score de confiance, badges, ambassadeurs et programme partenaires.</p>
+        <p lang="en">Leaderboards, trust score, badges, ambassadors and partner program.</p>
+      </article>
+    </section>
+
+    <section class="legal-links-section">
+      <div class="legal-cards">
+        <article class="legal-card">
+          <h3 lang="fr">Politique de confidentialité</h3>
+          <h3 lang="en">Privacy Policy</h3>
+          <p lang="fr">Comment nous collectons, utilisons et protégeons vos données (RGPD, partage, publicité, achats).</p>
+          <p lang="en">How we collect, use and protect your data (GDPR, sharing, ads, purchases).</p>
+          <a href="privacy-policy.html" class="btn btn-secondary" lang="fr">Lire le document</a>
+          <a href="privacy-policy.html" class="btn btn-secondary" lang="en">Read document</a>
+        </article>
+        <article class="legal-card">
+          <h3 lang="fr">Conditions d'utilisation</h3>
+          <h3 lang="en">Terms of Use</h3>
+          <p lang="fr">Règles d'utilisation de l'application, responsabilités et droits des utilisateurs.</p>
+          <p lang="en">App usage rules, responsibilities and user rights.</p>
+          <a href="terms-of-service.html" class="btn btn-secondary" lang="fr">Lire le document</a>
+          <a href="terms-of-service.html" class="btn btn-secondary" lang="en">Read document</a>
+        </article>
+      </div>
+    </section>
+
+    <section class="contact-strip">
+      <h2 lang="fr">Une question ?</h2>
+      <h2 lang="en">Questions?</h2>
+      <p lang="fr">Support et demandes liées au compte ou à la confidentialité.</p>
+      <p lang="en">Support and account or privacy inquiries.</p>
+      <a href="mailto:ultimate.petanque.app@gmail.com">ultimate.petanque.app@gmail.com</a>
+    </section>
+  </main>
+
+  <footer class="page-footer" style="max-width:960px;margin:0 auto 32px;padding:0 20px">
+    <p>© Ultimate Petanque</p>
+    <p style="margin-top:8px">
+      <a href="privacy-policy.html" lang="fr">Confidentialité</a>
+      <a href="privacy-policy.html" lang="en">Privacy</a>
+      <a href="terms-of-service.html" lang="fr">Conditions</a>
+      <a href="terms-of-service.html" lang="en">Terms</a>
+    </p>
+  </footer>
+
+  <script src="js/site.js"></script>
+</body>
+</html>
