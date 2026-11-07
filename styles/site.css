@@ -122,10 +122,12 @@ a:hover { color: var(--primary-dark); text-decoration: underline; }
 
 .lang-switch {
   display: flex;
+  flex-wrap: wrap;
   gap: 6px;
+  direction: ltr;
 }
 .lang-switch button {
-  padding: 6px 14px;
+  padding: 6px 10px;
   border-radius: 999px;
   border: 1px solid var(--border);
   background: var(--surface);
@@ -259,6 +261,76 @@ a:hover { color: var(--primary-dark); text-decoration: underline; }
   color: var(--text-secondary);
   line-height: 1.55;
 }
+
+.audiences {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 20px 48px;
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+
+.audience {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-xl);
+  padding: 28px 24px 22px;
+  box-shadow: var(--shadow);
+}
+
+.audience-kicker {
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-bottom: 6px;
+}
+
+.audience h2 {
+  font-size: 26px;
+  line-height: 1.2;
+  margin-bottom: 8px;
+}
+
+.audience-lead {
+  color: var(--text-secondary);
+  font-size: 16px;
+  max-width: 68ch;
+  margin-bottom: 18px;
+}
+
+.benefit-list {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 12px;
+}
+
+.benefit-list li {
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  padding: 14px 16px;
+}
+
+.benefit-list strong {
+  display: block;
+  font-size: 15px;
+  margin-bottom: 4px;
+}
+
+.benefit-list span {
+  display: block;
+  font-size: 14px;
+  color: var(--text-secondary);
+  line-height: 1.5;
+}
+
+body.lang-ar { direction: rtl; }
+body.lang-ar .lang-switch,
+body.lang-ar .hero-cta,
+body.lang-ar .benefit-list { direction: rtl; }
 
 .legal-links-section {
   max-width: var(--max-width);
@@ -425,13 +497,15 @@ a:hover { color: var(--primary-dark); text-decoration: underline; }
 }
 .page-footer a { color: var(--text-secondary); font-weight: 600; margin: 0 8px; }
 
-/* —— Bilingual (default FR on <body class="lang-fr"> before JS) —— */
-body.lang-fr [lang="en"] { display: none !important; }
-body.lang-en [lang="fr"] { display: none !important; }
-body.lang-en [lang="en"] { display: revert; }
-body.lang-en .site-nav a [lang="en"] { display: inline !important; }
-body.lang-en .btn[lang="en"] { display: inline-flex !important; }
-body.lang-fr .btn[lang="fr"] { display: inline-flex !important; }
+/* One language visible. French is the no-JS default (body.lang-fr). */
+body:not(.lang-fr) [lang="fr"],
+body:not(.lang-en) [lang="en"],
+body:not(.lang-es) [lang="es"],
+body:not(.lang-de) [lang="de"],
+body:not(.lang-th) [lang="th"],
+body:not(.lang-ar) [lang="ar"],
+body:not(.lang-it) [lang="it"],
+body:not(.lang-nl) [lang="nl"] { display: none !important; }
 
 @media (max-width: 640px) {
   .site-header-inner { flex-direction: column; align-items: stretch; }

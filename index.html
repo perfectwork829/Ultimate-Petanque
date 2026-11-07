@@ -3,16 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Ultimate Petanque — Suivi de performances, matchs, défis, tournois et carte interactive pour la pétanque.">
+  <meta name="description" content="Ultimate Petanque — suivi de performances pour joueurs, clubs, ambassadeurs et sponsors.">
   <title>Ultimate Petanque — Application mobile</title>
   <link rel="stylesheet" href="styles/site.css">
   <link rel="icon" href="assets/logo.png" type="image/png">
-  <style>
-    body { margin: 0; font-family: system-ui, sans-serif; background: #F8FAFC; color: #0F172A; }
-    body.lang-fr [lang="en"], body.lang-en [lang="fr"] { display: none !important; }
-  </style>
 </head>
-<body class="lang-fr" data-page="home">
+<body class="lang-fr" data-page="home" data-title-fr="Ultimate Petanque — Application mobile" data-title-en="Ultimate Petanque — Mobile app">
   <header class="site-header">
     <div class="site-header-inner">
       <a href="index.html" class="brand">
@@ -29,9 +25,15 @@
         <a href="privacy-policy.html"><span lang="fr">Confidentialité</span><span lang="en">Privacy</span></a>
         <a href="terms-of-service.html"><span lang="fr">Conditions</span><span lang="en">Terms</span></a>
       </nav>
-      <div class="lang-switch">
-        <button type="button" data-lang="fr" class="active" onclick="setLang('fr')">FR</button>
-        <button type="button" data-lang="en" onclick="setLang('en')">EN</button>
+      <div class="lang-switch" role="group" aria-label="Language">
+        <button type="button" data-lang="fr" class="active">FR</button>
+        <button type="button" data-lang="en">EN</button>
+        <button type="button" data-lang="es">ES</button>
+        <button type="button" data-lang="de">DE</button>
+        <button type="button" data-lang="th">TH</button>
+        <button type="button" data-lang="ar">AR</button>
+        <button type="button" data-lang="it">IT</button>
+        <button type="button" data-lang="nl">NL</button>
       </div>
     </div>
   </header>
@@ -42,50 +44,227 @@
       <div class="hero-home-badge" lang="en">Mobile app</div>
       <h1 lang="fr">La pétanque, suivie comme un sport de haut niveau</h1>
       <h1 lang="en">Petanque, tracked like a pro sport</h1>
-      <p class="lead" lang="fr">
-        Matchs, défis (10 tirs, sautée, précision), tournois, annuaire, carte interactive,
-        statistiques avancées et communauté — le tout dans une seule application.
-      </p>
-      <p class="lead" lang="en">
-        Matches, challenges (10 shots, lob, precision), tournaments, directory, interactive map,
-        advanced stats and community — all in one app.
-      </p>
+      <p class="lead" lang="fr">Joueurs, clubs, ambassadeurs, sponsors : chacun a son cadre. Le tir, le point et le terrain restent au centre.</p>
+      <p class="lead" lang="en">Players, clubs, ambassadors, sponsors: each gets a frame. The shot, the point and the court stay in the middle.</p>
       <div class="hero-cta">
-        <span class="btn btn-primary" lang="fr">📱 Bientôt sur App Store &amp; Google Play</span>
-        <span class="btn btn-primary" lang="en">📱 Coming to App Store &amp; Google Play</span>
-        <a href="mailto:ultimate.petanque.app@gmail.com" class="btn btn-secondary" lang="fr">Nous contacter</a>
-        <a href="mailto:ultimate.petanque.app@gmail.com" class="btn btn-secondary" lang="en">Contact us</a>
+        <span class="btn btn-primary" lang="fr">Bientôt sur App Store &amp; Google Play</span>
+        <span class="btn btn-primary" lang="en">Coming to App Store &amp; Google Play</span>
+        <a href="mailto:thomas@ultimatepetanque.app" class="btn btn-secondary" lang="fr">Nous contacter</a>
+        <a href="mailto:thomas@ultimatepetanque.app" class="btn btn-secondary" lang="en">Contact us</a>
       </div>
     </section>
 
-    <section class="features" aria-label="Features">
-      <article class="feature-card">
-        <div class="feature-icon" style="background:rgba(37,99,235,0.12)">📊</div>
-        <h3 lang="fr">Matchs &amp; notation</h3>
-        <h3 lang="en">Matches &amp; notation</h3>
-        <p lang="fr">Score en direct, notation détaillée (tir / point), statistiques et export PDF/CSV.</p>
-        <p lang="en">Live scoring, detailed shot notation, statistics and PDF/CSV export.</p>
+    <section class="audiences" aria-label="Audiences">
+      <article class="audience" id="players">
+        <p class="audience-kicker" style="color:#2563EB" lang="fr">Joueurs</p>
+        <p class="audience-kicker" style="color:#2563EB" lang="en">Players</p>
+        <h2 lang="fr">Ce qui change pour les joueurs</h2>
+        <h2 lang="en">What changes for players</h2>
+        <p class="audience-lead" lang="fr">Le score, le tir et le terrain, pendant que la mène est encore en cours.</p>
+        <p class="audience-lead" lang="en">The score, the shot and the court, while the end is still live.</p>
+        <ul class="benefit-list">
+          <li>
+            <strong lang="fr">La mène, notée tout de suite</strong>
+            <strong lang="en">The end, scored as it lands</strong>
+            <span lang="fr">Tir, point, carreau : le geste est dans les stats avant de quitter le cercle.</span>
+            <span lang="en">Shot, point, carreau: the throw is in your stats before you leave the circle.</span>
+          </li>
+          <li>
+            <strong lang="fr">Un ELO qui distingue les rôles</strong>
+            <strong lang="en">An ELO that knows the roles</strong>
+            <span lang="fr">Tireur, pointeur, milieu : un carreau n'a pas le même poids qu'un point chanceux.</span>
+            <span lang="en">Shooter, pointer, middle: a carreau does not weigh the same as a lucky point.</span>
+          </li>
+          <li>
+            <strong lang="fr">Le bras, sous un chiffre</strong>
+            <strong lang="en">The arm, under a number</strong>
+            <span lang="fr">Défis 10 tirs, tir sauté, précision : un score à battre la semaine suivante.</span>
+            <span lang="en">10-shot, lob and precision challenges: a number to beat next week.</span>
+          </li>
+          <li>
+            <strong lang="fr">Un terrain qui joue vraiment</strong>
+            <strong lang="en">A court that is actually playing</strong>
+            <span lang="fr">Les terrains actifs près de vous : vous décidez si le cercle vaut le déplacement.</span>
+            <span lang="en">Active courts near you: you decide if the circle is worth the trip.</span>
+          </li>
+          <li>
+            <strong lang="fr">Un score que l'autre confirme</strong>
+            <strong lang="en">A score the other player confirms</strong>
+            <span lang="fr">Un match partagé n'entre au classement que si les deux camps le valident.</span>
+            <span lang="en">A shared match reaches the ranking only when both sides stand behind it.</span>
+          </li>
+          <li>
+            <strong lang="fr">Le palmarès garde la place</strong>
+            <strong lang="en">The record keeps the place</strong>
+            <span lang="fr">1er, demi-finale, quart, éliminé en poules : la place enregistrée, pas un souvenir flou.</span>
+            <span lang="en">1st, semi, quarters, out in the groups: the place you saved, not a vague memory.</span>
+          </li>
+          <li>
+            <strong lang="fr">L'arbitre, dans votre langue</strong>
+            <strong lang="en">The referee, in your language</strong>
+            <span lang="fr">Une question, le numéro d'article, et la mène reprend.</span>
+            <span lang="en">One question, the article number, and the end starts again.</span>
+          </li>
+        </ul>
       </article>
-      <article class="feature-card">
-        <div class="feature-icon" style="background:rgba(245,158,11,0.15)">🎯</div>
-        <h3 lang="fr">Défis &amp; tournois</h3>
-        <h3 lang="en">Challenges &amp; tournaments</h3>
-        <p lang="fr">10 tirs, tirs sautée, précision, phases et tableaux de tournois.</p>
-        <p lang="en">10 shots, lob shots, precision, tournament phases and brackets.</p>
+
+      <article class="audience" id="clubs">
+        <p class="audience-kicker" style="color:#059669" lang="fr">Clubs</p>
+        <p class="audience-kicker" style="color:#059669" lang="en">Clubs</p>
+        <h2 lang="fr">Ce qui change pour les clubs</h2>
+        <h2 lang="en">What changes for clubs</h2>
+        <p class="audience-lead" lang="fr">Le club tient son terrain, ses joueurs et son heure de début au même endroit.</p>
+        <p class="audience-lead" lang="en">The club holds its court, its players and its start hour in one place.</p>
+        <ul class="benefit-list">
+          <li>
+            <strong lang="fr">Une page, tous les joueurs</strong>
+            <strong lang="en">One page, every player</strong>
+            <span lang="fr">Membres, invitations, et une épingle sur la carte pour que le club se trouve.</span>
+            <span lang="en">Members, invitations, and a pin on the map so the club can be found.</span>
+          </li>
+          <li>
+            <strong lang="fr">L'heure de début est la vraie</strong>
+            <strong lang="en">The start hour is the real one</strong>
+            <span lang="fr">La carte quitte « À venir » quand la première mène devrait déjà être posée.</span>
+            <span lang="en">The card leaves Upcoming when the first end should already be down.</span>
+          </li>
+          <li>
+            <strong lang="fr">Les formats du club</strong>
+            <strong lang="en">The formats the club already plays</strong>
+            <span lang="fr">Tête-à-tête, doublette, triplette, phases : le tableau n'habite plus un tableur.</span>
+            <span lang="en">Singles, doubles, triples, phases: the board no longer lives in a spreadsheet.</span>
+          </li>
+          <li>
+            <strong lang="fr">Le club, dans sa ville</strong>
+            <strong lang="en">The club, in its city</strong>
+            <span lang="fr">Le classement de ville dit où vous en êtes, pas seulement qui était là dimanche.</span>
+            <span lang="en">The city ranking shows where you stand, not only who showed up on Sunday.</span>
+          </li>
+          <li>
+            <strong lang="fr">Le terrain se remplit</strong>
+            <strong lang="en">The court fills up</strong>
+            <span lang="fr">Rendez-vous, créneaux, invitations depuis l'annuaire : l'heure et le terrain sont connus.</span>
+            <span lang="en">Meetups, slots, invites from the directory: the hour and the court are known.</span>
+          </li>
+          <li>
+            <strong lang="fr">Les rôles, pas le groupe de discussion</strong>
+            <strong lang="en">Roles, not the group chat</strong>
+            <span lang="fr">Montez l'équipe avec les joueurs du club, tireur et pointeur compris.</span>
+            <span lang="en">Build the side from the club's players, shooter and pointer included.</span>
+          </li>
+          <li>
+            <strong lang="fr">Une fiche que la ville peut ouvrir</strong>
+            <strong lang="en">A card the city can open</strong>
+            <span lang="fr">Le club est public sur la carte, sans donner un numéro à tout le monde.</span>
+            <span lang="en">The club is public on the map, without handing a phone number to everyone.</span>
+          </li>
+        </ul>
       </article>
-      <article class="feature-card">
-        <div class="feature-icon" style="background:rgba(16,185,129,0.12)">🗺️</div>
-        <h3 lang="fr">Carte &amp; annuaire</h3>
-        <h3 lang="en">Map &amp; directory</h3>
-        <p lang="fr">Terrains, clubs, joueurs publics et partenaires sur une carte interactive.</p>
-        <p lang="en">Courts, clubs, public players and partners on an interactive map.</p>
+
+      <article class="audience" id="ambassadors">
+        <p class="audience-kicker" style="color:#D97706" lang="fr">Ambassadeurs</p>
+        <p class="audience-kicker" style="color:#D97706" lang="en">Ambassadors</p>
+        <h2 lang="fr">Ce qui change pour les ambassadeurs</h2>
+        <h2 lang="en">What changes for ambassadors</h2>
+        <p class="audience-lead" lang="fr">Votre nom amène des joueurs, et vous voyez lesquels.</p>
+        <p class="audience-lead" lang="en">Your name brings players in, and you see which ones.</p>
+        <ul class="benefit-list">
+          <li>
+            <strong lang="fr">Un code qui est le vôtre</strong>
+            <strong lang="en">A code that is yours</strong>
+            <span lang="fr">Chaque joueur qui arrive par vous est compté.</span>
+            <span lang="en">Every player who joins through you is counted.</span>
+          </li>
+          <li>
+            <strong lang="fr">Le niveau suit le travail</strong>
+            <strong lang="en">The level follows the work</strong>
+            <span lang="fr">Découverte, Confirmé, Élite : la promotion vient des parrainages, pas d'un formulaire.</span>
+            <span lang="en">Discovery, Confirmed, Elite: promotion comes from referrals, not a form.</span>
+          </li>
+          <li>
+            <strong lang="fr">Le défi, vous le tenez</strong>
+            <strong lang="en">You run the challenge</strong>
+            <span lang="fr">Date, terrain, témoins, et un classement que les joueurs voient.</span>
+            <span lang="en">Date, court, witnesses, and a ranking the players can see.</span>
+          </li>
+          <li>
+            <strong lang="fr">Le chiffre après l'événement</strong>
+            <strong lang="en">The number after the event</strong>
+            <span lang="fr">Impressions, clics, CTR : vous savez quel post a vraiment déplacé du monde.</span>
+            <span lang="en">Impressions, clicks, CTR: you know which post actually moved people.</span>
+          </li>
+          <li>
+            <strong lang="fr">La bannière se mérite</strong>
+            <strong lang="en">The banner is earned</strong>
+            <span lang="fr">La visibilité à l'accueil suit le niveau. Elle n'est pas collée pour toujours.</span>
+            <span lang="en">Home visibility follows the level. It is not stuck there forever.</span>
+          </li>
+          <li>
+            <strong lang="fr">Le push reste dans un quota</strong>
+            <strong lang="en">The push stays inside a quota</strong>
+            <span lang="fr">Vous touchez des joueurs sans arroser toute la carte.</span>
+            <span lang="en">You reach players without covering the whole map.</span>
+          </li>
+          <li>
+            <strong lang="fr">Le témoin pèse plus</strong>
+            <strong lang="en">The witness weighs more</strong>
+            <span lang="fr">Un score attesté compte davantage qu'un score saisi seul.</span>
+            <span lang="en">An attested score weighs more than a score typed alone.</span>
+          </li>
+        </ul>
       </article>
-      <article class="feature-card">
-        <div class="feature-icon" style="background:rgba(59,130,246,0.12)">🏆</div>
-        <h3 lang="fr">Communauté</h3>
-        <h3 lang="en">Community</h3>
-        <p lang="fr">Classements, score de confiance, badges, ambassadeurs et programme partenaires.</p>
-        <p lang="en">Leaderboards, trust score, badges, ambassadors and partner program.</p>
+
+      <article class="audience" id="sponsors">
+        <p class="audience-kicker" style="color:#7C3AED" lang="fr">Sponsors</p>
+        <p class="audience-kicker" style="color:#7C3AED" lang="en">Sponsors</p>
+        <h2 lang="fr">Ce qui change pour les sponsors</h2>
+        <h2 lang="en">What changes for sponsors</h2>
+        <p class="audience-lead" lang="fr">La marque est sur le terrain, là où les joueurs regardent déjà.</p>
+        <p class="audience-lead" lang="en">The brand sits on the court, where players are already looking.</p>
+        <ul class="benefit-list">
+          <li>
+            <strong lang="fr">Une place sur la carte</strong>
+            <strong lang="en">A place on the map</strong>
+            <span lang="fr">Couleur de marque et badge S sur les terrains, clubs et joueurs que vous soutenez.</span>
+            <span lang="en">Brand color and an S badge on the courts, clubs and players you back.</span>
+          </li>
+          <li>
+            <strong lang="fr">Trois niveaux, un cadre clair</strong>
+            <strong lang="en">Three levels, a clear frame</strong>
+            <span lang="fr">Bronze, Argent, Or : vous voyez ce que le palier suivant ajoute avant de signer.</span>
+            <span lang="en">Bronze, Silver, Gold: you see what the next tier adds before you sign.</span>
+          </li>
+          <li>
+            <strong lang="fr">La bannière, là où ça se joue</strong>
+            <strong lang="en">The banner, where the game is</strong>
+            <span lang="fr">Tournante ou fixe sur l'accueil, au moment où le joueur ouvre l'app.</span>
+            <span lang="en">Rotating or fixed on the home screen, the moment a player opens the app.</span>
+          </li>
+          <li>
+            <strong lang="fr">L'emplacement pub, à vos couleurs</strong>
+            <strong lang="en">The ad slot, in your colors</strong>
+            <span lang="fr">En Or, votre bannière peut prendre la place de la publicité générique.</span>
+            <span lang="en">At Gold, your banner can take the place of the generic ad.</span>
+          </li>
+          <li>
+            <strong lang="fr">Le retour, item par item</strong>
+            <strong lang="en">The return, item by item</strong>
+            <span lang="fr">Impressions, clics, CTR par terrain, club, tournoi ou joueur, prêts à exporter.</span>
+            <span lang="en">Impressions, clicks and CTR per court, club, tournament or player, ready to export.</span>
+          </li>
+          <li>
+            <strong lang="fr">Le nom ne s'affiche qu'avec un oui</strong>
+            <strong lang="en">The name goes up only after a yes</strong>
+            <span lang="fr">Le propriétaire accepte le sponsoring. Pas de logo surprise sur son club.</span>
+            <span lang="en">The owner accepts the sponsorship. No surprise logo on their club.</span>
+          </li>
+          <li>
+            <strong lang="fr">Un push qui a une cible</strong>
+            <strong lang="en">A push with a target</strong>
+            <span lang="fr">Des joueurs près d'un terrain, puis le résultat réel de l'envoi.</span>
+            <span lang="en">Players near a court, then what the send actually did.</span>
+          </li>
+        </ul>
       </article>
     </section>
 
@@ -94,16 +273,16 @@
         <article class="legal-card">
           <h3 lang="fr">Politique de confidentialité</h3>
           <h3 lang="en">Privacy Policy</h3>
-          <p lang="fr">Comment nous collectons, utilisons et protégeons vos données (RGPD, partage, publicité, achats).</p>
-          <p lang="en">How we collect, use and protect your data (GDPR, sharing, ads, purchases).</p>
+          <p lang="fr">Données, partage, publicité, achats. Édité au Québec : Loi 25 et LPRPDE. Les joueurs en Europe conservent leurs droits RGPD.</p>
+          <p lang="en">Data, sharing, ads, purchases. Published in Quebec: Law 25 and PIPEDA. Players in Europe keep their GDPR rights.</p>
           <a href="privacy-policy.html" class="btn btn-secondary" lang="fr">Lire le document</a>
           <a href="privacy-policy.html" class="btn btn-secondary" lang="en">Read document</a>
         </article>
         <article class="legal-card">
           <h3 lang="fr">Conditions d'utilisation</h3>
           <h3 lang="en">Terms of Use</h3>
-          <p lang="fr">Règles d'utilisation de l'application, responsabilités et droits des utilisateurs.</p>
-          <p lang="en">App usage rules, responsibilities and user rights.</p>
+          <p lang="fr">Règles d'usage, responsabilités, droit du Québec et du Canada, droits des consommateurs.</p>
+          <p lang="en">Usage rules, responsibilities, Quebec and Canadian law, consumer rights.</p>
           <a href="terms-of-service.html" class="btn btn-secondary" lang="fr">Lire le document</a>
           <a href="terms-of-service.html" class="btn btn-secondary" lang="en">Read document</a>
         </article>
@@ -115,7 +294,7 @@
       <h2 lang="en">Questions?</h2>
       <p lang="fr">Support et demandes liées au compte ou à la confidentialité.</p>
       <p lang="en">Support and account or privacy inquiries.</p>
-      <a href="mailto:ultimate.petanque.app@gmail.com">ultimate.petanque.app@gmail.com</a>
+      <a href="mailto:thomas@ultimatepetanque.app">thomas@ultimatepetanque.app</a>
     </section>
   </main>
 
@@ -128,7 +307,17 @@
       <a href="terms-of-service.html" lang="en">Terms</a>
     </p>
   </footer>
-
+  <script src="js/dict.js"></script>
+  <script src="js/dict-legal.js"></script>
+  <script src="js/dict-legal-b.js"></script>
+  <script src="js/dict-legal-c.js"></script>
+  <script src="js/dict-legal-d.js"></script>
+  <script src="js/dict-legal-e.js"></script>
+  <script src="js/dict-legal-f.js"></script>
+  <script src="js/dict-legal-g.js"></script>
+  <script src="js/dict-legal-h.js"></script>
+  <script src="js/dict-legal-i.js"></script>
   <script src="js/site.js"></script>
+  <script src="js/analytics.js"></script>
 </body>
 </html>
